@@ -2563,3 +2563,29 @@ Caused by: org.eclipse.jgit.errors.CheckoutConflictException: Checkout conflict 
 	at org.eclipse.jgit.dircache.DirCacheCheckout.checkout(DirCacheCheckout.java:484)
 	at org.eclipse.jgit.api.MergeCommand.call(MergeCommand.java:304)
 	... 10 more
+
+!ENTRY org.eclipse.core.jobs 4 2 2018-10-10 15:19:58.797
+!MESSAGE An internal error occurred during: "Resetting to HEAD".
+!STACK 0
+org.eclipse.jgit.api.errors.JGitInternalException: Exception caught during execution of reset command. Could not rename file C:\Users\1027\projectworkspace\.metadata\.plugins\org.eclipse.wst.sse.core\._task-tags.properties3791897778639265404.tmp to C:\Users\1027\projectworkspace\.metadata\.plugins\org.eclipse.wst.sse.core\task-tags.properties
+	at org.eclipse.jgit.api.ResetCommand.call(ResetCommand.java:242)
+	at org.eclipse.egit.core.op.ResetOperation.reset(ResetOperation.java:104)
+	at org.eclipse.egit.core.op.ResetOperation.access$0(ResetOperation.java:88)
+	at org.eclipse.egit.core.op.ResetOperation$1.run(ResetOperation.java:77)
+	at org.eclipse.core.internal.resources.Workspace.run(Workspace.java:2292)
+	at org.eclipse.core.internal.resources.Workspace.run(Workspace.java:2319)
+	at org.eclipse.egit.core.op.ResetOperation.execute(ResetOperation.java:81)
+	at org.eclipse.egit.core.internal.job.JobUtil$2.runInWorkspace(JobUtil.java:107)
+	at org.eclipse.core.internal.resources.InternalWorkspaceJob.run(InternalWorkspaceJob.java:42)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+Caused by: java.io.IOException: Could not rename file C:\Users\1027\projectworkspace\.metadata\.plugins\org.eclipse.wst.sse.core\._task-tags.properties3791897778639265404.tmp to C:\Users\1027\projectworkspace\.metadata\.plugins\org.eclipse.wst.sse.core\task-tags.properties
+	at org.eclipse.jgit.dircache.DirCacheCheckout.checkoutEntry(DirCacheCheckout.java:1496)
+	at org.eclipse.jgit.dircache.DirCacheCheckout.doCheckout(DirCacheCheckout.java:577)
+	at org.eclipse.jgit.dircache.DirCacheCheckout.checkout(DirCacheCheckout.java:484)
+	at org.eclipse.jgit.api.ResetCommand.checkoutIndex(ResetCommand.java:447)
+	at org.eclipse.jgit.api.ResetCommand.call(ResetCommand.java:215)
+	... 9 more
+Caused by: java.io.IOException: Could not rename file C:\Users\1027\projectworkspace\.metadata\.plugins\org.eclipse.wst.sse.core\._task-tags.properties3791897778639265404.tmp to C:\Users\1027\projectworkspace\.metadata\.plugins\org.eclipse.wst.sse.core\task-tags.properties
+	at org.eclipse.jgit.util.FileUtils.rename(FileUtils.java:309)
+	at org.eclipse.jgit.dircache.DirCacheCheckout.checkoutEntry(DirCacheCheckout.java:1494)
+	... 13 more
