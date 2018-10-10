@@ -494,6 +494,7 @@ This warning can be switched off on the Team > Git > Confirmations and Warnings 
 
 !ENTRY org.eclipse.m2e.logback.appender 2 0 2018-10-10 12:43:38.639
 !MESSAGE The POM for org.slf4j:slf4j-log4j12:jar:${org.slf4j-version} is missing, no dependency information available
+<<<<<<< HEAD
 
 !ENTRY org.eclipse.jface 2 0 2018-10-10 12:45:21.585
 !MESSAGE Keybinding conflicts occurred.  They may interfere with normal accelerator operation.
@@ -2831,3 +2832,5 @@ Caused by: java.io.IOException: Could not rename file C:\Users\1027\projectworks
 	at org.eclipse.jgit.util.FileUtils.rename(FileUtils.java:309)
 	at org.eclipse.jgit.dircache.DirCacheCheckout.checkoutEntry(DirCacheCheckout.java:1494)
 	... 12 more
+=======
+>>>>>>> refs/remotes/origin/master
